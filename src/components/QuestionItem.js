@@ -9,6 +9,10 @@ function QuestionItem({ question }) {
     </option>
   ));
 
+  function handleDelete() {
+    console.log(`Deleting question ${id}`);
+  }
+
   return (
     <li>
       <h4>Question {id}</h4>
@@ -17,7 +21,7 @@ function QuestionItem({ question }) {
         Correct Answer:
         <select defaultValue={correctIndex}>{options}</select>
       </label>
-      <button>Delete Question</button>
+      <button onClick={handleDelete}>Delete Question</button>
     </li>
   );
 }
